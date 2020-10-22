@@ -281,6 +281,7 @@ endif()
 #--------------------- CUDA libraries ---------------------
 if (TPL_ENABLE_CUDALIB)   ## want to use cuda
   enable_language(CUDA)
+  add_compile_definitions(GPU_ACC)
   if (NOT TPL_CUDA_LIBRARIES)
       message(FATAL_ERROR "TPL_CUDA_LIBRARIES option should be set for CUDA support to be enabled.")
   endif()
